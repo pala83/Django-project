@@ -96,18 +96,3 @@ def saludo_html(request):
 def despedida(request):
     return HttpResponse("Hasta luego!")
 ~~~
-
-2. Cada funcion dentro de larchivo **views.py** es una vista. Se puede pasar HTML como respuesta, pero **no se debe hacer asi**, para eso se utilizaran las plantillas.
-~~~ py
-from django.http import HttpResponse
-
-def saludo(request):
-    return HttpResponse("Hola a todos!")
-
-def saludo_html(request):
-    documento="""<html><body><h1>Hola a todos!</h1></body></html>"""
-    return HttpResponse(documento)
-
-def despedida(request):
-    return HttpResponse("Hasta luego!")
-~~~
